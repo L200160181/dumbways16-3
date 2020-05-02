@@ -1,0 +1,8 @@
+SELECT * FROM music;
+
+SELECT music.title as judul ,music.durasi,genre.name as genre ,singers.name as penyanyi, music.photo as gambar, music.deskripsi FROM music, genre, singers where genre.id = music.id_genre AND singers.id = music.Id_singer ORDER BY genre.name;
+
+SELECT music.title as judul ,music.durasi,genre.name as genre ,singers.name as penyanyi, music.photo as gambar, music.deskripsi FROM music, genre, singers where genre.id = music.id_genre AND singers.id = music.Id_singer ORDER BY music.id;
+
+
+INSERT INTO `music`(`title`, `durasi`, `photo`, `id_genre`, `Id_singer`, `deskripsi`) VALUES (['april'],['1 menit'],['april.img'],[6],[4],['lagu yang indah']);
